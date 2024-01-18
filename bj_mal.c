@@ -6,9 +6,9 @@
 #define CARD_VALUES 13
 #define MAX_HAND 10
 
-// Representación de las  cartas
+// Representación de las cartas
 char *values[] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
-char *suits[] = {"Corazones", "Diamantes", "Picas", "Tréboles"};
+char *suits[] = {"Corazones", "Diamantes", "Picas", "Treboles"};
 
 // Estructura para una carta
 struct carta {
@@ -27,7 +27,7 @@ void initializeDeck() {
     for (int i = 0; i < TOTAL_CARDS; i++) {
         deck[i].value = values[i % CARD_VALUES];
         deck[i].suit = suits[i / CARD_VALUES];
-        deck[i].numericValue = (i % CARD_VALUES) + 1;
+        deck[i].numericValue = (i % CARD_VALUES) + 2;
         if (deck[i].numericValue > 10) deck[i].numericValue = 10;
         if (i % CARD_VALUES == CARD_VALUES - 1) deck[i].numericValue = 11;
     }
