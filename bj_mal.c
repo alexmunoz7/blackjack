@@ -55,6 +55,8 @@ int sumHand(struct carta hand[], int numCards) {
     return sum;
 }
 
+
+
 int main() {
     initializeDeck();
     shuffleDeck();
@@ -75,7 +77,7 @@ int main() {
         scanf(" %c", &choice);
 
         if (choice == 's' || choice == 'S') {
-            playerHand[numPlayerCards] = deck[numPlayerCards + 1];
+            playerHand[numPlayerCards] = deck[numPlayerCards];
             playerSum = sumHand(playerHand, ++numPlayerCards);
 
             printf("Nueva carta:\n");
